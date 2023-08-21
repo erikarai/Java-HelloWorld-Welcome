@@ -17,9 +17,9 @@ jobs:
         uses: actions/checkout@v3
 
       - name: create class
-        uses: javac Welcomeworld.java
+        run: javac WelcomeWorld.java
 
       - name: compile and run
-        uses: java WelcomeWorld
+        run: java WelcomeWorld
 
 
