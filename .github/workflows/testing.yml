@@ -1,0 +1,25 @@
+name: Perform CICD Operations on Console Based Java Application
+on: push
+jobs:
+  CICD:
+    runs-on: ubuntu-latest
+    steps:
+      - name: installing java
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+      - name: check
+        run: 
+          java -version
+          javac -version
+      - name: clone project
+        uses: actions/checkout@v3
+
+      - name: create class
+        uses: javac Welcomeworld.java
+
+      - name: compile and run
+        uses: java WelcomeWorld
+
+
