@@ -10,7 +10,7 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
       - name: check
-        run: 
+        run: |
           java -version
           javac -version
       - name: clone project
